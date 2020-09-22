@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+header{
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    text-align: center;
+    color:white;
+    background-color: black;
+    padding: 12px;
+    margin: 5px;
+    border-radius: 12px;
+}
+
+/* desendencia */
+header h1{
+    --animate-duration: 5s;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2A7350;
+    border-radius: 12px;
+    margin: 5px;
+    align-items: center;
+    /* position: sticky;
+    top:0; */
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    float: left;
+}
+nav a{
+    display: block;
+    margin: 12px;
+    padding: 3px 15px;
+    font-size: 18px;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+}
+nav img{
+    vertical-align: middle;
+}
+nav a:hover{
+    background-color: black;
+    border-radius: 12px;
+
+}
+  
+/* a:link{
+    color: rgb(255, 208, 0);
+    text-decoration: none;
+}
+a:visited{
+    color: rgb(212, 56, 56);
+}
+a:active{
+    color:green
+}
+a:hover, p:hover{
+    background-color: indigo;
+    color: white;
+} */
+
+.container{
+    display: flex;
+    border: black solid 5px;
+    margin: 0 6px;
+}
+main{
+    text-align: justify;
+
+}
+ .footer{
+    display: flex;
+ }
+.footer div {
+    width: 33.33%;
+}
+.foter iframe{
+    width: 50%;
+    height: 200px;
+}
+
+.galeria>div{
+    display: flex;
+    
+}
+/* .galeria img{
+    width: 50vw;
+} */
+
+.col-2 div{width: 50%;margin: 3px 10px;}
+.col-3 div{width: calc(100% / 3);margin: 3px 10px;}
+.col-4 div{width: calc(100% / 4);margin: 3px 10px;}
+.col-5 div{width: calc(100% / 5);margin: 3px 10px;}
+.col-6 div{width: calc(100%/6);margin: 3px 10px;}
+
+.galeria img{
+    width: 100%;
+    /* la imagen se adapta al tamaño que damos */
+    object-fit: contain;
+    /* efecto con filter  de brillo */
+    filter: brightness(40%);
+    /* sombra */
+    /* filter: drop-shadow(10px 10px 1px black); */
+    /* filter: grayscale(50%); */
+    /* animacion */
+    animation: mianimation 3s alternate;
+   
+}
+ 
+.galeria img:hover{
+    /* filter: brightness(100%); */
+    filter: grayscale(0%);
+}
+
+@keyframes mianimation{
+    to{
+        transform: scale(1);
+    }
+    from{
+        transform: scale(1.5);
+    }
+}
+.ayuda{
+    width: 100%;
+    padding: 20px;
+}
+
+/* #textarea{
+    width: 50%;
+    height: 600px;
+} */
+.formulario{
+    width:30%;  
+    margin: auto;
+    padding: 15px;
+    background-color:rgba(2, 2, 2, 0.89);
+    color:white;
+    border-radius: 5px;
+}
+fieldset{
+    text-align: center;
+    padding:15px;
+}
+ 
+input[type=text], input[type=email],select, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #48d8c0;
+    border-radius: 10px;
+}
+label{
+    padding: 12px 12px 12px 0;
+}
+
+button[type=submit]{
+    background-color: #35e43b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    /*el cursor puede cambiar dependiendo de su valor el que nos 
+    muestra por default es la flecha y en esta sentencia la 
+    cambiamos por una manita */
+    cursor: pointer;
+    
+}
+
+button[type=submit]:hover{
+    background-color: #4cb0d8;
+}
+
+
+
+
+/* .object-fit{
+    width: 300px;
+    height: 500px;
+    background-color: blue;
+   
+} */
+.object-fit img{
+    background-color: blue;
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    object-position: right;
+    /* transition: object-position 5s; */
+    filter: sepia(.9);
+}
+
+.object-fit img:hover{
+    /* object-position: left; */
+    filter: none;
+}
